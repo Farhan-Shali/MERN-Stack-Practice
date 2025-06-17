@@ -55,19 +55,19 @@
     <body>
         <div class="column" id="todo">
             <h3>To Do</h3>
-            <div class="task">Update Docs</div>
-            <div class="task">Design UI</div>
-            <div class="task">Fix Bugs</div>
-            <div class="task">Write Reports</div>
+            <div class="task" draggable="true">Update Docs</div>
+            <div class="task" draggable="true">Design UI</div>
+            <div class="task" draggable="true">Fix Bugs</div>
+            <div class="task" draggable="true">Write Reports</div>
         </div>
         <div class="column" id="inprogress">
             <h3>In Progress</h3>
         </div>
 
         <script>
-            var tasks = document.querySelectorAll(".task")
-            var columns = document.querySelectorAll(".column")
-            var draggedTask = null
+            const tasks = document.querySelectorAll(".task")
+            const columns = document.querySelectorAll(".column")
+            let draggedTask = null
 
             for (var i = 0; i < tasks.length; i++) {
                 tasks[i].draggable = "true"
